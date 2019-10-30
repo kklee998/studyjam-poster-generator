@@ -12,3 +12,9 @@
 ```bash
 1. flask run
 ```
+
+### For debug mode
+
+```bash
+1. python app.py
+```

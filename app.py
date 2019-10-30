@@ -15,7 +15,7 @@ def create_poster(title="EVENT TITLE HERE", date="DATEHERE", time="TIMEHERE", lo
     time = request.args.get('time') or time
     location = request.args.get('location') or location
 
-    return render_template('study-jam.html', title=title, date=date, time=time, location=location)
+    return render_template('poster.html', title=title, date=date, time=time, location=location)
 
 if __name__ == '__main__':
     app.run(debug=True)
