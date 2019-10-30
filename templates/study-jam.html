@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+<html>
+<body>
+    <div class="logo">
+        <div class="major">
+            <img src="{{ url_for('static', filename='dscapu-full.png') }}" alt="DSC APU Logo">
+        </div>
+        <div class="row minor">
+            <div>
+                <img src="{{ url_for('static', filename='sds.png')}}" alt="SDS Logo" style="width: 300px">
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='apca.png') }}" alt="APCA Logo" style="width: 200px">
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <span style="color:#EA4335">Google</span>
+        <span style="color:#FBBC04">Cloud</span>
+        <span style="color:#0F9D58">Study</span>
+        <span style="color:#4285F4">Jam</span>
+        <span>:</span>
+    </div>
+
+    <div class="topic">
+        <span>{{ title }}</span>
+        <div class="row line-group">
+            <div class="line column" style="border-top-color:#EA4335"></div>
+            <div class="line column" style="border-top-color:#FBBC04"></div>
+            <div class="line column" style="border-top-color:#0F9D58"></div>
+            <div class="line column" style="border-top-color:#4285F4"></div>
+        </div>
+    </div>
+
+    <div class="detail">
+        <div id="date-time">
+            <span>{{ date }}</span> <span>{{ time }}</span>
+        </div>
+        <div id="location">
+            {{ location }}
+        </div>
+    </div>
+
+    <div class="note">
+        <div>
+            <span>// Lunch Provided</span>
+        </div>
+        <div>
+            <span>// Limited Seats</span>
+        </div>
+        <div>
+            <span>// Open to all</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
