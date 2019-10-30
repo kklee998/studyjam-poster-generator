@@ -1,15 +1,49 @@
-<!doctype html>
-<form action="{{url_for('create_poster')}}" method="GET">
-  Title of event:<br>
-  <input type="text" name="title"><br>
-  Date:<br>
-  <input type="text" name="date"><br>
-  Time:<br>
-  <input type="text" name="time"><br>
-  Location:<br>
-  <input type="text" name="location">
+<!DOCTYPE html>
+<!-- link rel="stylesheet" href="{{ url_for('static', filename='form/style.css')}}" -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Study Jam Poster Generator</title>
 
-  <br><br>
-  <input target="_blank" type="submit" value="Submit">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-</form>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+  </head>
+  <body class="d-flex justify-content-center">
+    <div class="shadow card text-center" style="margin: 10px; padding: 20px;">
+      <h2>Study Jam Poster Generator</h1>
+      <form action="{{url_for('create_poster')}}" method="GET">
+        <span>Title of event: </span><br>
+        <input type="text" name="title"><br>
+        <br>
+        <span>Date: </span><br>
+        <input type="text" name="date"><br> 
+        <br>
+        <span>Time: </span><br>
+        <input type="text" name="time"><br>
+        <br>
+        <span>Location: </span><br>
+        <input type="text" name="location"><br>
+        <br>
+        <span>Participant: </span><br>
+        <input type="radio" name="participant" value="apu"> APU Student/Alumni<br>
+        <input type="radio" name="participant" value="all"> All<br>
+        <br>
+        <button class="btn-primary" target="_blank" type="submit" value="Submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  
+</html>
